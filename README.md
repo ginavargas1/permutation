@@ -1,1 +1,4 @@
 # permutation
+
+Keep function pure. 
+

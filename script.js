@@ -22,14 +22,24 @@ const getPermutations = arr => {
 
         for (let i = 0; i < n -1; i++) {
             if (n % 2 === 0) {
-                swapInPlace
+                swapInPlace(heapArry, i, n - 1);
+            } else {
+                swapInPlace(heapArry, 0, n - 1);
             }
+
+            generate(n - 1, heapArry)
             
         }
-    }
+    };
 
+    generate(arr.length, arr.slice());
 
-}
+    return output;
+
+};
+
+console.log(getPermutations([1,2,3]));
+
 
 //const array = [1,2,3] 
 //getPermutation(arr);
